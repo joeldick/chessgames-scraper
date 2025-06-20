@@ -4,21 +4,48 @@ This project scrapes metadata and PGN data from [Chessgames.com](https://www.che
 
 - A CSV file containing metadata for each game (players, result, location, opening, etc.)
 - A `.pgn` file with all game data, formatted cleanly for use in PGN viewers or databases
-- A list of failed game URLs, if any
+- A list of failed game IDs, if any
 
-## Features
+---
 
-- Fetches PGN data directly from Chessgames.com by game ID
-- Extracts useful metadata such as:
-  - Player names
-  - Location and event
-  - Year, round, result
-  - Number of moves
-  - Opening name (based on FEN position matching)
-- Writes clean PGN files with one blank line between games
-- Logs failed game URLs
+## 📁 Project Structure
 
-## Usage
+| File / Folder       | Purpose                                                                         |
+| ------------------- | ------------------------------------------------------------------------------- |
+| `main.py`           | Entrypoint script that runs the scraper logic from `cgcom_scraper.py`           |
+| `cgcom_scraper.py`  | Main script that fetches PGNs and extracts metadata from Chessgames.com         |
+| `chess_openings.py` | Utility for identifying the opening name from a PGN using FEN-based matching    |
+| `eco-codes/`        | Folder containing a CSV file of chess openings with SAN move sequences and FENs |
+| `add_fen.py`        | One-time utility script to add FENs to the opening database from move sequences |
+| `urls.txt`          | Input file listing Chessgames.com game URLs (one per line)                      |
+| `input/`            | Directory for input file (see below)                                            |
+| `output/`           | Directory for output files (see below)                                          |
+
+---
+
+## 📤 Input Files
+
+Output is written to the `output/` directory.
+
+| File       | Description                                             |
+| ---------- | ------------------------------------------------------- |
+| `urls.txt` | List of urls from chessgames.com of the games to scrape |
+
+---
+
+## 📤 Output Files
+
+Output is written to the `output/` directory.
+
+| File                              | Description                             |
+| --------------------------------- | --------------------------------------- |
+| `scraped_chessgames_metadata.csv` | CSV of metadata for each scraped game   |
+| `scraped_chessgames_pgns.pgn`     | Combined PGNs with clean formatting     |
+| `failed_gids.txt`                 | List of game IDs that failed to process |
+
+---
+
+## 🚀 Usage
 
 1. Clone the repository:
 
@@ -27,59 +54,27 @@ git clone https://github.com/joeldick/chessgames-scraper.git
 cd chessgames-scraper
 ```
 
-2. Create a Python virtual environment (optional but recommended):
+2. Install dependencies:
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
+> No external libraries are required beyond Python standard library (Python 3.7+)
 
-3. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Create a `urls.txt` file and paste in full game URLs, one per line, like:
+3. Add game URLs to `input\urls.txt`, one per line. Example:
 
 ```
-https://www.chessgames.com/perl/chessgame?gid=1011478
-https://www.chessgames.com/perl/chessgame?gid=1251877
-...
+https://www.chessgames.com/perl/chessgame?gid=1060718
+https://www.chessgames.com/perl/chessgame?gid=1451573
 ```
 
-5. Run the scraper:
+4. Run the scraper:
 
 ```bash
 python main.py
 ```
 
-6. Output files:
-
-- `scraped_chessgames_metadata.csv`
-- `scraped_chessgames_pgns.pgn`
-- `failed_gids.csv` (optional, if any games failed)
-
-## Project Structure
-
-```
-.
-├── main.py
-├── chess_openings.py
-├── eco-codes/
-│   └── opening_names.csv
-├── urls.txt
-├── scraped_chessgames_metadata.csv
-├── scraped_chessgames_pgns.pgn
-├── failed_gids.csv
-├── .gitignore
-└── README.md
-```
-
-## License
-
-MIT License (or replace with your preferred license)
-
 ---
 
-**Tip**: Use the PGN file in chess software like SCID, ChessBase, or Lichess Study Import to browse the scraped games.
+## 🧠 Opening Detection Logic
+
+Opening names are assigned based on FEN positions matched from a cleaned opening database (`eco-codes/opening_names.csv`). The logic walks through each move in a game, checking whether the current board state matches any known FENs in the database.
+
+---
