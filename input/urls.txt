@@ -8,4 +8,4 @@ https://www.chessgames.com/perl/chessgame?gid=1273731
 https://www.chessgames.com/perl/chessgame?gid=2028101
 https://www.chessgames.com/perl/chessgame?gid=1055858
 https://www.chessgames.com/perl/chessgame?gid=1094594
-https://www.chessgames.com/perl/chessgame?gid=badgid
+https://www.chessgames.com/perl/chessgame?gid=10945941094594
