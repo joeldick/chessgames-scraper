@@ -3,6 +3,7 @@ import csv
 import time
 from datetime import datetime
 import shutil
+
 from cgcom_scraper import *
 
 if __name__ == "__main__":
@@ -55,3 +56,6 @@ if __name__ == "__main__":
     print("\n=== Summary ===")
     print(f"✅ Successful games: {success_count}")
     print(f"❌ Failed games:     {failed_count}")
+    if UNMAPPED_CODES:
+        print("Unmapped country codes:", ", ".join(sorted(UNMAPPED_CODES)))
+

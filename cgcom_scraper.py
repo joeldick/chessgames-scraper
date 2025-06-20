@@ -2,9 +2,30 @@ import requests
 import re
 from math import ceil
 import pycountry
-import csv
 
 from chess_openings import find_opening_from_pgn
+
+CUSTOM_COUNTRY_CODES = {
+    "GER": "Germany",
+    "RUE": "Russia",
+    "AUH": "Austria-Hungary",
+    "MNC": "Monaco",
+    "URS": "Soviet Union",
+    "YUG": "Yugoslavia",
+    "TCH": "Czechoslovakia",
+    "GDR": "East Germany",
+    "FRG": "West Germany",
+    "CSR": "Czechoslovakia",
+    "ENG": "England",
+    "SCO": "Scotland",
+    "USA": "United States",
+    "HUN": "Hungary",
+    "ROM": "Romania",
+    "CUB": "Cuba",
+    "ESP": "Spain"
+    # Add more as needed
+}
+UNMAPPED_CODES = set()
 
 def get_pgn(gid):
     url = f"http://www.chessgames.com/nodejs/game/viewGamePGN?text=1&gid={gid}"
@@ -68,9 +89,6 @@ def metadata_from_pgn(pgn):
             match = re.search(tags.get("PlyCount"), pgn)
             fields["Moves"] = ceil(int(match.group(1)) / 2)
         elif field == "Opening":
-            #match = re.search(tags.get("ECO"), pgn)
-            #eco_code = match.group(1)
-            #fields["Opening"] = eco_to_name(eco_code)
             fields["Opening"] = find_opening_from_pgn(pgn)
 
         else:
@@ -81,10 +99,21 @@ def metadata_from_pgn(pgn):
     return fields
 
 def get_country_name_from_code(code):
+    code = code.upper()
+    # First, check custom mapping
+    if code in CUSTOM_COUNTRY_CODES:
+        return CUSTOM_COUNTRY_CODES[code]
+
+    # Fall back to pycountry
     try:
-        country = pycountry.countries.get(alpha_3=code.upper())
-        return country.name if country else code
+        country = pycountry.countries.get(alpha_3=code)
+        if country:
+            return country.name
+        else:
+            UNMAPPED_CODES.add(code)
+            return code
     except:
+        UNMAPPED_CODES.add(code)
         return code
 
 def normalize_location(site_tag):
@@ -95,14 +124,6 @@ def normalize_location(site_tag):
         return f"{city}, {get_country_name_from_code(code)}"
     else:
         return site_tag
-    
-def eco_to_name(eco_code):
-    with open("eco-codes/opening_names.csv", newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            if row["eco"].strip() == eco_code.strip():
-                return row["name"].strip()
-    return eco_code
 
 def clean_pgn(pgn):
     # Strip leading/trailing spaces from each line and remove blank lines between tags
