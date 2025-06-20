@@ -23,13 +23,13 @@ This project scrapes metadata and PGN data from [Chessgames.com](https://www.che
 
 ---
 
-## 📤 Input Files
+## 📥 Input Files
 
-Output is written to the `output/` directory.
+Input is read from the `input/` directory.
 
-| File       | Description                                             |
-| ---------- | ------------------------------------------------------- |
-| `urls.txt` | List of urls from chessgames.com of the games to scrape |
+| File       | Description                                               |
+| ---------- | --------------------------------------------------------- |
+| `urls.txt` | List of Chessgames.com game URLs to scrape (one per line) |
 
 ---
 
