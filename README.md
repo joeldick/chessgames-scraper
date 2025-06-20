@@ -17,8 +17,8 @@ This project scrapes metadata and PGN data from [Chessgames.com](https://www.che
 | `chess_openings.py` | Utility for identifying the opening name from a PGN using FEN-based matching    |
 | `eco-codes/`        | Folder containing a CSV file of chess openings with SAN move sequences and FENs |
 | `add_fen.py`        | One-time utility script to add FENs to the opening database from move sequences |
-| `urls.txt`          | Input file listing Chessgames.com game URLs (one per line)                      |
 | `input/`            | Directory for input file (see below)                                            |
+| `urls.txt`          | Input file listing Chessgames.com game URLs (one per line)                      |
 | `output/`           | Directory for output files (see below)                                          |
 
 ---
