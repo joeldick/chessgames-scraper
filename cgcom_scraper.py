@@ -22,7 +22,9 @@ CUSTOM_COUNTRY_CODES = {
     "HUN": "Hungary",
     "ROM": "Romania",
     "CUB": "Cuba",
-    "ESP": "Spain"
+    "ESP": "Spain",
+    "DEN": "Denmark",
+    "NED": "Netherlands",
     # Add more as needed
 }
 UNMAPPED_CODES = set()

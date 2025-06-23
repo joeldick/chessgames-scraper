@@ -40,19 +40,21 @@ if __name__ == "__main__":
                 failed_gids.append(f"https://www.chessgames.com/perl/chessgame?gid={gid}")
                 failed_count += 1
             time.sleep(1.0)
-
+    
     if failed_gids:
         with open(output_failed, mode="w", encoding="utf-8") as f:
             f.write(",".join(failed_gids))
 
     shutil.copy(output_csv, "output/scraped_chessgames_metadata_latest.csv")
     shutil.copy(output_pgn, "output/scraped_chessgames_pgns_latest.pgn")
-    shutil.copy(output_failed, "output/failed_gids_latest.txt")
+    if failed_gids:
+        shutil.copy(output_failed, "output/failed_gids_latest.txt")
 
     print("\n=== Output Files ===")
     print(f"Metadata CSV:        {output_csv}")
     print(f"PGN File:            {output_pgn}")
-    print(f"Failed URLs:         {output_failed}")
+    if failed_gids:
+        print(f"Failed URLs:         {output_failed}")
     print("\n=== Summary ===")
     print(f"✅ Successful games: {success_count}")
     print(f"❌ Failed games:     {failed_count}")
