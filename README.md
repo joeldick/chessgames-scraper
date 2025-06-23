@@ -19,6 +19,7 @@ This project scrapes metadata and PGN data from [Chessgames.com](https://www.che
 | `add_fen.py`                             | One-time utility script to add FENs to the opening database from move sequences |
 | `input/`                                 | Directory for input file (see below)                                            |
 | `output/`                                | Directory for output files (see below)                                          |
+| `requirements.txt`                       | List of required packages                                          |
 
 ---
 
