@@ -2,12 +2,13 @@ import csv
 import chess
 import chess.pgn
 import io
+from pathlib import Path
 
 def get_pgn_moves(pgn):
     game = chess.pgn.read_game(io.StringIO(pgn))
     return [move.san() for move in game.mainline()]
 
-def find_opening_from_pgn(pgn, openings_csv_path="eco-codes\opening_names_with_fen.csv"):
+def find_opening_from_pgn(pgn, openings_csv_path=Path("eco-codes/opening_names_with_fen.csv")):
     pgn_moves = get_pgn_moves(pgn)
     best_match_len = 0
     best_name = ""

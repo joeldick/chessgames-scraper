@@ -38,9 +38,9 @@ Output is written to the `output/` directory.
 
 | File                              | Description                             |
 | --------------------------------- | --------------------------------------- |
-| `output/scraped_chessgames_metadata_*.csv` | Timestamped CSV of metadata for each scraped game   |
-| `output/scraped_chessgames_pgns_*.pgn`     | Timestamped combined PGNs with clean formatting     |
-| `output/failed_gids_*.txt`                 | Timestamped list of game IDs that failed to process |
+| `output/scraped_chessgames_metadata__<timestamp>.csv` | Timestamped CSV of metadata for each scraped game   |
+| `output/scraped_chessgames_pgns__<timestamp>.pgn`     | Timestamped combined PGNs with clean formatting     |
+| `output/failed_gids__<timestamp>.txt`                 | Timestamped list of game IDs that failed to process |
 | `output/scraped_chessgames_metadata_latest.csv` | Most recent CSV of metadata for each scraped game   |
 | `output/scraped_chessgames_pgns_latest.pgn`     | Most recent combined PGNs with clean formatting     |
 | `output/failed_gids_latest.txt`                 | Most recent list of game IDs that failed to process |
