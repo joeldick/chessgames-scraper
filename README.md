@@ -10,16 +10,15 @@ This project scrapes metadata and PGN data from [Chessgames.com](https://www.che
 
 ## 📁 Project Structure
 
-| File / Folder       | Purpose                                                                         |
-| ------------------- | ------------------------------------------------------------------------------- |
-| `main.py`           | Entrypoint script that runs the scraper logic from `cgcom_scraper.py`           |
-| `cgcom_scraper.py`  | Main script that fetches PGNs and extracts metadata from Chessgames.com         |
-| `chess_openings.py` | Utility for identifying the opening name from a PGN using FEN-based matching    |
-| `eco-codes/`        | Folder containing a CSV file of chess openings with SAN move sequences and FENs |
-| `add_fen.py`        | One-time utility script to add FENs to the opening database from move sequences |
-| `input/`            | Directory for input file (see below)                                            |
-| `urls.txt`          | Input file listing Chessgames.com game URLs (one per line)                      |
-| `output/`           | Directory for output files (see below)                                          |
+| File / Folder                            | Purpose                                                                         |
+| ---------------------------------------- | ------------------------------------------------------------------------------- |
+| `main.py`                                | Entrypoint script that runs the scraper logic from `cgcom_scraper.py`           |
+| `cgcom_scraper.py`                       | Main script that fetches PGNs and extracts metadata from Chessgames.com         |
+| `chess_openings.py`                      | Utility for identifying the opening name from a PGN using FEN-based matching    |
+| `eco-codes/`                             | Folder containing a CSV file of chess openings with SAN move sequences and FENs |
+| `add_fen.py`                             | One-time utility script to add FENs to the opening database from move sequences |
+| `input/`                                 | Directory for input file (see below)                                            |
+| `output/`                                | Directory for output files (see below)                                          |
 
 ---
 
@@ -29,7 +28,7 @@ Input is read from the `input/` directory.
 
 | File       | Description                                               |
 | ---------- | --------------------------------------------------------- |
-| `urls.txt` | List of Chessgames.com game URLs to scrape (one per line) |
+| `input/urls.txt` | List of Chessgames.com game URLs to scrape (one per line) |
 
 ---
 
@@ -39,13 +38,16 @@ Output is written to the `output/` directory.
 
 | File                              | Description                             |
 | --------------------------------- | --------------------------------------- |
-| `scraped_chessgames_metadata.csv` | CSV of metadata for each scraped game   |
-| `scraped_chessgames_pgns.pgn`     | Combined PGNs with clean formatting     |
-| `failed_gids.txt`                 | List of game IDs that failed to process |
+| `output/scraped_chessgames_metadata_*.csv` | Timestamped CSV of metadata for each scraped game   |
+| `output/scraped_chessgames_pgns_*.pgn`     | Timestamped combined PGNs with clean formatting     |
+| `output/failed_gids_*.txt`                 | Timestamped list of game IDs that failed to process |
+| `output/scraped_chessgames_metadata_latest.csv` | Most recent CSV of metadata for each scraped game   |
+| `output/scraped_chessgames_pgns_latest.pgn`     | Most recent combined PGNs with clean formatting     |
+| `output/failed_gids_latest.txt`                 | Most recent list of game IDs that failed to process |
 
 ---
 
-## 🚀 Usage
+## 🧰 Installation
 
 1. Clone the repository:
 
@@ -54,18 +56,34 @@ git clone https://github.com/joeldick/chessgames-scraper.git
 cd chessgames-scraper
 ```
 
-2. Install dependencies:
+2. Set up a virtual environment:
 
-> No external libraries are required beyond Python standard library (Python 3.7+)
+```bash
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+```
 
-3. Add game URLs to `input\urls.txt`, one per line. Example:
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs the following packages:
+- [`pycountry`](https://pypi.org/project/pycountry/)
+- [`python-chess`](https://pypi.org/project/python-chess/)
+
+
+## 🚀 Usage
+
+1. Add game URLs to `input/urls.txt`, one per line. Example:
 
 ```
 https://www.chessgames.com/perl/chessgame?gid=1060718
 https://www.chessgames.com/perl/chessgame?gid=1451573
 ```
 
-4. Run the scraper:
+2. Run the scraper:
 
 ```bash
 python main.py
