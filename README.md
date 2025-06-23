@@ -38,9 +38,9 @@ Output is written to the `output/` directory.
 
 | File                              | Description                             |
 | --------------------------------- | --------------------------------------- |
-| `output/scraped_chessgames_metadata__<timestamp>.csv` | Timestamped CSV of metadata for each scraped game   |
-| `output/scraped_chessgames_pgns__<timestamp>.pgn`     | Timestamped combined PGNs with clean formatting     |
-| `output/failed_gids__<timestamp>.txt`                 | Timestamped list of game IDs that failed to process |
+| `output/scraped_chessgames_metadata_<timestamp>.csv` | Timestamped CSV of metadata for each scraped game   |
+| `output/scraped_chessgames_pgns_<timestamp>.pgn`     | Timestamped combined PGNs with clean formatting     |
+| `output/failed_gids_<timestamp>.txt`                 | Timestamped list of game IDs that failed to process |
 | `output/scraped_chessgames_metadata_latest.csv` | Most recent CSV of metadata for each scraped game   |
 | `output/scraped_chessgames_pgns_latest.pgn`     | Most recent combined PGNs with clean formatting     |
 | `output/failed_gids_latest.txt`                 | Most recent list of game IDs that failed to process |
@@ -59,7 +59,7 @@ cd chessgames-scraper
 2. Set up a virtual environment:
 
 ```bash
-python3 -m venv .venv
+python -m venv .venv
 source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
 ```
 
@@ -70,9 +70,9 @@ pip install -r requirements.txt
 ```
 
 This installs the following packages:
+- [`requests`](https://pypi.org/project/requests/)
 - [`pycountry`](https://pypi.org/project/pycountry/)
-- [`python-chess`](https://pypi.org/project/python-chess/)
-
+- [`chess`](https://pypi.org/project/chess/)
 
 ## 🚀 Usage
 
@@ -83,13 +83,27 @@ https://www.chessgames.com/perl/chessgame?gid=1060718
 https://www.chessgames.com/perl/chessgame?gid=1451573
 ```
 
-2. Run the scraper:
+2. Activate the virtual environment: 
+
+```bash
+source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+```
+
+3. Run the scraper:
 
 ```bash
 python main.py
 ```
 
 ---
+
+## 📦 Required Packages
+
+These are installed automatically from requirements.txt:
+
+- requests
+- pycountry
+- chess
 
 ## 🧠 Opening Detection Logic
 
