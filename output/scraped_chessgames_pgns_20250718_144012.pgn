@@ -1,0 +1,159 @@
+[Event "Vienna"]
+[Site "Vienna AUT"]
+[Date "1922.11.18"]
+[EventDate "1922.11.13"]
+[Round "5"]
+[Result "0-1"]
+[White "Alexander Alekhine"]
+[Black "Ernst Gruenfeld"]
+[ECO "D80"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "110"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Bg5 Ne4 5. cxd5 Nxc3 6. bxc3
+Qxd5 7. Nf3 Bg7 8. e3 c5 9. Bb5+ Bd7 10. c4 Qe4 11. O-O Bxb5
+12. cxb5 Nd7 13. Rc1 b6 14. Qb3 h6 15. Bh4 O-O 16. Rc4 Qe6
+17. Rd1 Rfe8 18. d5 Qd6 19. Bg3 e5 20. dxe6 Qxe6 21. Rd6 Qe7
+22. Ra4 Nf8 23. Qd5 Rad8 24. Nd2 Rxd6 25. Bxd6 Rd8 26. Nc4 Qd7
+27. h3 Ne6 28. Qe4 Bf8 29. Bxf8 Qd1+ 30. Kh2 Qxa4 31. Be7 Re8
+32. Bf6 Ng7 33. Qd3 Qxa2 34. Bb2 Re6 35. Qc3 f6 36. Qd3 h5
+37. e4 Qa4 38. Nd6 Qb4 39. Nc4 Qxb5 40. f4 Qc6 41. e5 f5
+42. Nd6 Re7 43. Qg3 Kh7 44. Qg5 Qd7 45. Qg3 Ne6 46. Qf3 b5
+47. Qa8 Qd8 48. Qd5 b4 49. g3 a5 50. Qc6 Qd7 51. Qa6 a4
+52. Ba1 a3 53. Qc4 Qc6 54. Kg1 Qf3 55. Kh2 Qf2+ 0-1
+
+[Event "Lasker - Tarrasch World Championship Match"]
+[Site "Duesseldorf GER"]
+[Date "1908.08.24"]
+[EventDate "?"]
+[Round "4"]
+[Result "0-1"]
+[White "Siegbert Tarrasch"]
+[Black "Emanuel Lasker"]
+[ECO "C66"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "82"]
+
+1.e4 e5 2.Nf3 Nc6 3.Bb5 Nf6 4.O-O d6 5.d4 Bd7 6.Nc3 Be7 7.Re1
+exd4 8.Nxd4 Nxd4 9.Qxd4 Bxb5 10.Nxb5 O-O 11.Bg5 h6 12.Bh4 Re8
+13.Rad1 Nd7 14.Bxe7 Rxe7 15.Qc3 Re5 16.Nd4 Rc5 17.Qb3 Nb6
+18.f4 Qf6 19.Qf3 Re8 20.c3 a5 21.b3 a4 22.b4 Rc4 23.g3 Rd8
+24.Re3 c5 25.Nb5 cxb4 26.Rxd6 Rxd6 27.e5 Rxf4 28.gxf4 Qg6+
+29.Kh1 Qb1+ 30.Kg2 Rd2+ 31.Re2 Qxa2 32.Rxd2 Qxd2+ 33.Kg3 a3
+34.e6 Qe1+ 35.Kg4 Qxe6+ 36.f5 Qc4+ 37.Nd4 a2 38.Qd1 Nd5 39.Qa4
+Nxc3 40.Qe8+ Kh7 41.Kh5 a1=Q 0-1
+
+[Event "Simul, 50b"]
+[Site "Amstelveen NED"]
+[Date "1933.11.03"]
+[EventDate "?"]
+[Round "?"]
+[Result "1-0"]
+[White "Alexander Alekhine"]
+[Black "Hoelscher"]
+[ECO "C62"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "33"]
+[Source "Tijdschrift, 01-11-1933, p.297"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 d6 4. d4 exd4 5. Qxd4 Bd7 6. Bxc6
+Bxc6 7. Nc3 Nf6 8. Bg5 Be7 9. O-O-O O-O 10. h4 h6 11. Nd5 hxg5
+12. Nxe7+ Qxe7 13. hxg5 Nxe4 14. Rh5 Qe6 15. Rdh1 f5 16. Ne5
+dxe5 17. g6 1-0
+
+[Event "Second Piatigorsky Cup"]
+[Site "Santa Monica, CA USA"]
+[Date "1966.08.03"]
+[EventDate "1966.07.17"]
+[Round "11"]
+[Result "0-1"]
+[White "Lajos Portisch"]
+[Black "Robert James Fischer"]
+[ECO "E45"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "70"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 b6 5. Nge2 Ba6 6. Ng3
+Bxc3+ 7. bxc3 d5 8. Qf3 O-O 9. e4 dxe4 10. Nxe4 Nxe4 11. Qxe4
+Qd7 12. Ba3 Re8 13. Bd3 f5 14. Qxa8 Nc6 15. Qxe8+ Qxe8 16. O-O
+Na5 17. Rae1 Bxc4 18. Bxc4 Nxc4 19. Bc1 c5 20. dxc5 bxc5
+21. Bf4 h6 22. Re2 g5 23. Be5 Qd8 24. Rfe1 Kf7 25. h3 f4
+26. Kh2 a6 27. Re4 Qd5 28. h4 Ne3 29. R1xe3 fxe3 30. Rxe3 Qxa2
+31. Rf3+ Ke8 32. Bg7 Qc4 33. hxg5 hxg5 34. Rf8+ Kd7 35. Ra8
+Kc6 0-1
+
+[Event "Havana ol (Men) fin-A"]
+[Site "Havana CUB"]
+[Date "1966.11.10"]
+[EventDate "?"]
+[Round "6"]
+[Result "1-0"]
+[White "Robert James Fischer"]
+[Black "Lajos Portisch"]
+[ECO "C69"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "67"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. O-O f6 6. d4
+exd4 7. Nxd4 c5 8. Nb3 Qxd1 9. Rxd1 Bd6 10. Na5 b5 11. c4 Ne7
+12. Be3 f5 13. Nc3 f4 14. e5 Bxe5 15. Bxc5 Bxc3 16. bxc3 Ng6
+17. Nc6 Be6 18. cxb5 axb5 19. Na7 Rb8 20. Rdb1 Kf7 21. Nxb5
+Rhd8 22. Rb4 Bxa2 23. Nxc7 Rbc8 24. h4 Rd2 25. Bb6 f3 26. Be3
+Re2 27. Nb5 Ra8 28. h5 Ne5 29. Rf4+ Ke7 30. Rd1 Rc8 31. Re4
+Kf6 32. Rd6+ Kf5 33. Rf4+ Kg5 34. Rxf3+ 1-0
+
+[Event "Kiel"]
+[Site "Kiel GER"]
+[Date "1893.??.??"]
+[EventDate "?"]
+[Round "?"]
+[Result "0-1"]
+[White "Lindemann"]
+[Black "Echtermeyer"]
+[ECO "B01"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "6"]
+
+1.e4 d5 2.exd5 Qxd5 3.Ke2 {White intended to play 3.Nc3, but
+by accident moved the Bc1 to c3 instead. The rules at the time
+required that an illegal move be retracted and replaced with a
+legal king move, so 3.Ke2 was the penalty. What happened next
+is unclear. The usual account is that Black simply played
+3...Qe4#. (See, for example, Irving Chernev, 'Wonders and
+Curiosities of Chess', New York, 1974, p. 119.) However, some
+contemporary accounts indicate that Black did not play the
+mate because he did not see it ("'Deutsche Schachzeitung' of
+September 1893, p. 283). The tournament book is more
+ambiguous, claiming that Black let White wriggle for a while
+(Kiel, 1893 tournament book, p. 60 (in the original "[...] zog
+es aber vor, den Gegner erst noch zappeln zu lassen, ehe er
+ihn endlich erschlug.")), indicating either a pause before
+playing 3...Qe4# or preference for a slower win. If additional
+moves were played after 3.Ke2, they have not been
+recorded. Information was retrieved from Edward Winter's C.N
+5381.} Qe4# {The congress book indicates that Black did not
+mate immediately after white's third move, but preferred to
+play a bit with White before making the kill. No moves are
+supplied.} 0-1
+
+[Event "UKR-ch U08"]
+[Site "Evpatoria"]
+[Date "2007.05.12"]
+[EventDate "2007.05.09"]
+[Round "4"]
+[Result "0-1"]
+[White "Ivan Skrypin"]
+[Black "Alexey Glebov"]
+[ECO "A02"]
+[WhiteElo "?"]
+[BlackElo "?"]
+[PlyCount "4"]
+
+1. f4 e6 2. g4 Qh4# 0-1
+
